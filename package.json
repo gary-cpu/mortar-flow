@@ -1,0 +1,166 @@
+# Setting Up MortarFlow via GitHub Mobile App
+
+## Prerequisites
+1. GitHub mobile app installed on your phone
+2. Expo Go app installed on your phone
+3. GitHub account
+
+## Step 1: Create Repository via GitHub Mobile
+
+1. Open GitHub mobile app
+2. Tap the "+" icon in the top right
+3. Select "New repository"
+4. Fill in:
+   - Repository name: `mortar-flow`
+   - Description: "Mobile mortar flow measurement app"
+   - Select "Add README file"
+   - Choose "Public" repository
+   - Select "MIT License"
+5. Tap "Create repository"
+
+## Step 2: Upload Base Files
+
+### Via GitHub Mobile App:
+1. Navigate to your new repository
+2. Tap the "Add file" button (+ icon)
+3. Select "Create new file"
+4. For each key file, create in this order:
+
+First file:
+```
+File name: package.json
+Content:
+{
+  "name": "mortar-flow",
+  "version": "1.0.0",
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "expo": "~48.0.0",
+    "expo-camera": "~13.2.1",
+    "expo-image-manipulator": "~11.1.1",
+    "expo-file-system": "~15.2.2",
+    "expo-sharing": "~11.2.2",
+    "react": "18.2.0",
+    "react-native": "0.71.8"
+  },
+  "private": true
+}
+```
+
+Second file:
+```
+File name: App.js
+Content:
+[Copy the App.js code from previous artifact]
+```
+
+Third file:
+```
+File name: app.json
+Content:
+{
+  "expo": {
+    "name": "MortarFlow",
+    "slug": "mortar-flow",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    }
+  }
+}
+```
+
+## Step 3: Running the Project
+
+1. Install Expo Go from App Store
+2. Open Expo Go
+3. Tap "Sign in with GitHub"
+4. Once signed in, your project will appear under "Recently in Development"
+5. Tap on project to run
+
+## Step 4: Making Changes via GitHub Mobile
+
+1. Navigate to file you want to edit
+2. Tap pencil icon
+3. Make changes
+4. Tap "Commit changes"
+5. Add commit message
+6. Select "Commit directly to main branch"
+7. Tap "Commit changes"
+
+## Common Tasks in GitHub Mobile
+
+### View Project Status
+1. Tap repository
+2. Check "Code" tab for files
+3. "Issues" tab for tasks
+4. "Actions" tab for builds
+
+### Create New Branch
+1. Tap main branch name
+2. Tap "New branch"
+3. Enter branch name
+4. Tap "Create branch"
+
+### Review & Merge Pull Requests
+1. Tap "Pull requests" tab
+2. Select PR to review
+3. Review changes
+4. Tap "Merge" to accept
+
+### Check Build Status
+1. Tap "Actions" tab
+2. View latest workflow runs
+3. Tap run to see details
+
+## Troubleshooting
+
+### Camera Not Working
+1. Check permissions in Expo Go
+2. Ensure camera access granted
+3. Restart Expo Go app
+
+### Build Fails
+1. Check Actions tab for error
+2. Verify package.json is valid
+3. Check dependencies match
+
+### Can't Push Changes
+1. Verify GitHub login
+2. Check repository permissions
+3. Try force-closing GitHub app
+
+## Development Tips
+
+1. Always pull latest changes before editing
+2. Test changes in Expo Go
+3. Commit small, focused changes
+4. Use clear commit messages
+
+## Resources
+- GitHub Mobile Documentation: https://docs.github.com/en/get-started/using-github/github-mobile
+- Expo Documentation: https://docs.expo.dev
+- React Native Documentation: https://reactnative.dev/docs/getting-started
